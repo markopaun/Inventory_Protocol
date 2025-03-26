@@ -191,7 +191,7 @@
         </div>
       </div>
     </div>
-  `;const t=s.querySelectorAll(".icon-entry");Ze.set(t,{opacity:0,y:-80});let r=!1;function e(){const n=s.querySelector(".trigger");if(!n)return;const i=n.getBoundingClientRect();!r&&i.top<=window.innerHeight*.2&&(r=!0,Ze.to(t,{duration:.4,opacity:1,y:0,stagger:.1,ease:"power2.out"})),r&&i.bottom>=window.innerHeight&&(r=!1,Ze.set(t,{opacity:0,y:-80}))}return window.addEventListener("scroll",e),s}Ze.registerPlugin(J);function Yd(){const s=document.createElement("div");s.classList.add("solution-container"),s.innerHTML=`
+  `;const t=s.querySelectorAll(".icon-entry");Ze.set(t,{opacity:0,y:-80});let r=!1;function e(){const n=s.querySelector(".trigger");if(!n)return;const i=n.getBoundingClientRect();!r&&i.top<=window.innerHeight*.4&&(r=!0,Ze.to(t,{duration:.4,opacity:1,y:0,stagger:.1,ease:"power2.out"})),r&&i.bottom>=window.innerHeight&&(r=!1,Ze.set(t,{opacity:0,y:-80}))}return window.addEventListener("scroll",e),s}Ze.registerPlugin(J);function Yd(){const s=document.createElement("div");s.classList.add("solution-container"),s.innerHTML=`
       <div id="solution-trigger" class="trigger"></div>
       <div id="cards-trigger" class="trigger"></div>
       <div id="svg-container-solution"></div>
@@ -244,7 +244,7 @@
         <button>LEARN MORE <br><span>(player side)</span></button>
       </div>
     </div>
-  `;const t=s.querySelector(".splide");if(t){let r=function(a){a.loop=!1,a.onended=()=>{clearTimeout(i),o.go(">")}},e=function(){const u=o.Components.Elements.slides[o.index].querySelector("video");u&&(r(u),u.currentTime=0,u.play().then(()=>{const l=o.Components.Controller.getIndex(),c=n[l]||5e3;i=window.setTimeout(()=>{o.go(">")},c)}).catch(l=>console.error("Error playing video:",l)))};const n=[7700,7700,7700];let i=0;const o=new iu(t,{perPage:1,type:"loop",arrows:!0,pagination:!0});o.on("mounted",()=>{e()}),o.on("moved",()=>{clearTimeout(i),e()}),o.mount()}return s}function l_(){const s=document.createElement("div");return s.classList.add("cases-container"),s.innerHTML=`
+  `;const t=s.querySelector(".splide");if(t){let r=function(a){a.loop=!1,a.onended=()=>{clearTimeout(i),o.go(">")}},e=function(){const u=o.Components.Elements.slides[o.index].querySelector("video");u&&(r(u),u.currentTime=0,u.play().then(()=>{const l=o.Components.Controller.getIndex(),c=n[l]||5e3;i=window.setTimeout(()=>{o.go(">")},c)}).catch(l=>console.error("Error playing video:",l)))};const n=[7700,7700,7700];let i=0;const o=new iu(t,{perPage:1,type:"loop",arrows:!0,pagination:!0,useScroll:!1});o.on("mounted",()=>{e()}),o.on("moved",()=>{clearTimeout(i),e()}),o.mount()}return s}function l_(){const s=document.createElement("div");return s.classList.add("cases-container"),s.innerHTML=`
         <img class="cases-bg" src="./img/Bg_Cases.png">
         <div class="casses-inner-container">
             <p class="heading">USE CASES</p>
